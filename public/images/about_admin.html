@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link href="aboutadmin_style.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light">
+  <!-- Sidebar -->
+  <aside class="adminbar" id="sidebar">
+    <div class="adminbar-title">
+      <i class="fas fa-water"></i>
+      <span class="sidebar-text">AQUATRACE</span>
+    </div>
+
+    <nav>
+      <a href="dashboard.html" class="adminnav" data-label="Dashboard">
+        <i class="fas fa-tachometer-alt"></i>
+        <span class="sidebar-text">Dashboard</span>
+      </a>
+      <a href="notifications.html" class="adminnav" data-label="Notifications">
+        <i class="fas fa-bell"></i>
+        <span class="sidebar-text">Notifications</span>
+      </a>
+      <a href="map.html" class="adminnav" data-label="Vessels">
+        <i class="fas fa-earth"></i> <span class="sidebar-text">Map</span>
+      </a>
+      <a href="ports_admin.html" class="adminnav" data-label="Ports">
+        <i class="fas fa-anchor"></i> <span class="sidebar-text">Ports</span>
+      </a>
+      <a href="users_admin.html" class="adminnav" data-label="Users">
+        <i class="fas fa-user"></i> <span class="sidebar-text">Users</span>
+      </a>
+      <a href="vessel_admin.html" class="adminnav" data-label="Vessels">
+        <i class="fas fa-ship"></i> <span class="sidebar-text">Vessels</span>
+      </a>
+      <a href="reports_admin.html" class="adminnav" data-label="Reports">
+        <i class="fas fa-chart-bar"></i>
+        <span class="sidebar-text">Reports</span>
+      </a>
+      <a href="about_admin.html" class="adminnav active" data-label="About">
+        <i class="fas fa-info-circle"></i>
+        <span class="sidebar-text">About</span>
+      </a>
+    </nav>
+
+    <div class="logout-btn">
+      <a href="loginsignup.html" data-label="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+        <span class="sidebar-text">Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Topbar -->
+  <header class="adminheader">
+    <div class="d-flex align-items-center w-100">
+      <button class="btn btn-outline-secondary me-2" id="toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="ms-auto d-flex align-items-center gap-2"></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="admin-body">
+    <section id="about" class="mb-5">
+      <!-- Mission & Vision -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-6">
+          <div class="card about-card h-100">
+            <div class="card-body text-center">
+              <h5>Mission</h5>
+              <p class="text-muted text-center">
+                Our mission goes beyond building a functional website — we aim to apply what we’ve learned to real-world
+                challenges, using technology to promote smarter and safer maritime monitoring. AquaTrace represents our
+                dedication to understanding how web systems connect people, data, and purpose. <br> <br>
+
+                Every feature you see here is a reflection of our effort, teamwork, and curiosity. We believe that
+                learning
+                is a continuous voyage, and this project is one milestone in our pursuit of excellence in the
+                ever-evolving world of web development.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card about-card h-100">
+            <div class="card-body text-center">
+              <h5>Vision</h5>
+              <p class="text-muted text-center">
+                To be a leading digital maritime solution provider in the
+                Philippines, offering modernized vessel tracking to promote
+                sustainability and innovation in the shipping industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="mb-5">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <i class="fas fa-map-marked-alt fa-2x text-primary mb-3"></i>
+              <h6>Real-time Tracking</h6>
+              <p class="text-muted small">
+                Monitor vessel movements with accurate and updated data.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <i class="fas fa-bell fa-2x text-danger mb-3"></i>
+              <h6>Smart Notifications</h6>
+              <p class="text-muted small">
+                Get instant alerts on important events such as arrivals and
+                delays.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <i class="fas fa-chart-line fa-2x text-success mb-3"></i>
+              <h6>Reports & Analytics</h6>
+              <p class="text-muted small">
+                Generate detailed summaries for effective decision-making.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-cards">
+        <div class="member-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/ashlei.jpg" class="member-img" alt="Member 1" />
+          <h3 class="member-name">Ashlei Krystel Panes</h3>
+          <p class="member-role">UI/UX Designer</p>
+          <div class="member-social">
+            <a href="https://www.facebook.com/share/1CqmNjqaoM/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/krysteluv?igsh=MWx2b3N0dzhqdXdlcg=="><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="member-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/ruzzel.jpg" class="member-img" alt="Member 2" />
+          <h3 class="member-name">Ruzzel Mae B. Padrones</h3>
+          <p class="member-role">UI/UX Designer</p>
+          <div class="member-social">
+            <a href="https://www.facebook.com/share/19frmDPa6v/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/nyx.zzel?igsh=MTVqbTg3M25zaXo1dQ=="><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="member-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/aira.jpg" class="member-img" alt="Member 3" />
+          <h3 class="member-name">Aira Rocel B. Nazareno</h3>
+          <p class="member-role">Backend Developer</p>
+          <div class="member-social">
+            <a href="https://www.facebook.com/share/1BJJkYHCNU/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aira_rocel?igsh=YjR0dWRrMThwaWI4"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="member-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="images/PLAIN.jpg" class="member-img" alt="Member 4" />
+          <h3 class="member-name">Elena Mae B. Mendoza</h3>
+          <p class="member-role">Frontend Developer</p>
+          <div class="member-social">
+            <a href="https://www.facebook.com/share/1BLJbR6RcK/"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const toggleBtn = document.getElementById("toggle-btn")
+    const sidebar = document.getElementById("sidebar")
+
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("collapsed")
+    })
+  </script>
+</body>
+
+</html>
