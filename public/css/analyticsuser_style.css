@@ -587,33 +587,3 @@ body::before {
     max-width: 280px;
   }
 }
-
-/* Force Bootstrap mobile navbar behavior to work */
-@media (max-width: 991px) {
-
-  /* Prevent your custom styles from breaking the collapse */
-  .navbar-collapse {
-    display: none !important;
-    height: 0 !important;
-    opacity: 0;
-    transition: height .3s ease, opacity .3s ease;
-  }
-
-  .navbar-collapse.show {
-    display: block !important;
-    height: auto !important;
-    opacity: 1;
-  }
-
-  /* Ensure toggler is clickable */
-  .navbar-toggler {
-    z-index: 9999;
-    position: relative;
-  }
-
-  /* Fix if something is overlapping the navbar */
-  #navbar,
-  #navbar * {
-    pointer-events: auto !important;
-  }
-}

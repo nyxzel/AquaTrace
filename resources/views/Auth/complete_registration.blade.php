@@ -29,7 +29,7 @@
     <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top scrolled" id="navbar">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="{{ route('web.landing') }}">
+            <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
                 <img src="{{ asset('images/AQUATRACELOGO.png') }}" alt="AquaTrace" height="40" loading="eager">
                 <p>AQUATRACE</p>
             </a>
@@ -40,20 +40,18 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ route('web.landing') }}">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('vessel.landing') }}">VESSELS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('ports.landing') }}">PORTS</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('news.landing') }}">NEWS</a></li>
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            ABOUT
-                        </a>
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown">ABOUT</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('about.landing') }}">ABOUT US</a></li>
                             <li><a class="dropdown-item" href="{{ route('contact.landing') }}">CONTACT</a></li>
+                            <li><a class="dropdown-item" href="{{ route('analytics.landing') }}">FLEET INSIGHTS</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('analytics.landing') }}">ANALYTICS</a></li>
                 </ul>
                 <div class="d-flex">
                     <a href="{{ route('login') }}" class="btn btn-outline-light btn-sm">BACK TO LOGIN</a>

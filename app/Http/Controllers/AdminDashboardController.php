@@ -97,10 +97,14 @@ class AdminDashboardController extends BaseController
             ));
 
             // return view('admin_dashboard_vue', compact(
-            //     'vesselCount', 'portCount', 'userCount', 'reportCount',
-            //     'vessels', 'ports', 'pendingOwners'
+            //     'vesselCount',
+            //     'portCount',
+            //     'userCount',
+            //     'reportCount',
+            //     'vessels',
+            //     'ports',
+            //     'pendingOwners'
             // ));
-
         } catch (\Exception $e) {
             \Log::error('Dashboard error: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Error loading dashboard');

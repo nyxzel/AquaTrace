@@ -12,8 +12,7 @@ class Position extends Model
     protected $table = 'positions';
     protected $primaryKey = 'position_id';
 
-    // IMPORTANT: Set to false since we're manually managing recorded_at
-    public $timestamps = false;
+    public $timestamps = false; // you set recorded_at manually
 
     protected $fillable = [
         'vessel_id',
@@ -31,73 +30,48 @@ class Position extends Model
         'recorded_at' => 'datetime'
     ];
 
-    /**
-     * Get the vessel that owns this position
-     */
     public function vessel()
     {
         return $this->belongsTo(Vessel::class, 'vessel_id', 'vessel_id');
     }
 
-    /**
-     * Get the voyage that owns this position
-     */
     public function voyage()
     {
         return $this->belongsTo(Voyage::class, 'voyage_id', 'voyage_id');
     }
 
-    /**
-     * Scope for positions within a date range
-     */
-    public function scopeInDateRange($query, $startDate, $endDate)
+    public function scopeRecent($query, $hours = 24)
     {
-        return $query->whereBetween('recorded_at', [$startDate, $endDate]);
+        return $query->where('recorded_at', '>=', now()->subHours($hours));
     }
 
-    /**
-     * Scope for positions for a specific vessel
-     */
-    public function scopeForVessel($query, $vesselId)
+    public function scopeByVessel($query, $vesselId)
     {
         return $query->where('vessel_id', $vesselId);
     }
 
-    /**
-     * Scope for positions for a specific voyage
-     */
-    public function scopeForVoyage($query, $voyageId)
-    {
-        return $query->where('voyage_id', $voyageId);
-    }
-
-    /**
-     * Get the status based on speed
-     */
-    public function getStatusAttribute()
-    {
-        if ($this->speed > 15) {
-            return 'Active';
-        } elseif ($this->speed > 0) {
-            return 'In Transit';
-        }
-        return 'Docked';
-    }
-
-    /**
-     * Get formatted position data
-     */
-    public function getFormattedData()
+    public function getFormattedCoordinatesAttribute()
     {
         return [
-            'position_id' => $this->position_id,
-            'latitude' => number_format($this->latitude, 6),
-            'longitude' => number_format($this->longitude, 6),
-            'speed' => number_format($this->speed, 2),
-            'recorded_at' => $this->recorded_at->format('M d, Y h:i A'),
-            'vessel' => $this->vessel ? $this->vessel->name : 'Unknown',
-            'voyage_id' => $this->voyage_id,
-            'status' => $this->status
+            'latitude' => (float) $this->latitude,
+            'longitude' => (float) $this->longitude
         ];
+    }
+
+    public function isMoving()
+    {
+        return $this->speed > 0;
+    }
+
+    public static function recordPosition($vesselId, $latitude, $longitude, $speed = 0, $voyageId = null)
+    {
+        return self::create([
+            'vessel_id' => $vesselId,
+            'voyage_id' => $voyageId,
+            'latitude' => $latitude,
+            'longitude' => $longitude,
+            'speed' => $speed,
+            'recorded_at' => now()
+        ]);
     }
 }

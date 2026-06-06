@@ -46,6 +46,7 @@
 
             <li><a href="{{ route('user.register.boat') }}"><i class="fas fa-ship"></i> Register Boat</a></li>
             <li><a href="{{ route('user.reports') }}"><i class="fas fa-file-alt"></i> Reports</a></li>
+
             <li><a href="{{ route('user.about') }}"><i class="fas fa-info-circle"></i> About</a></li>
             <li><a href="{{ route('user.contact') }}"><i class="fas fa-envelope"></i> Contact</a></li>
 

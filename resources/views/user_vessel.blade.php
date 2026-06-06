@@ -89,7 +89,7 @@
 
             <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
                 <ul class="navbar-nav mx-auto d-none d-lg-flex">
-                    <li class="nav-item"><a class="nav-link active" href="{{ route('home') }}">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ route('user.home') }}">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('user.vessels') }}">VESSELS</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('user.ports') }}">PORTS</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('user.news') }}">NEWS</a></li>
